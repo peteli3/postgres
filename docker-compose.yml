@@ -1,0 +1,9 @@
+services:
+  db:
+    container_name: postgres
+    image: postgres:latest
+    environment:
+      - POSTGRES_PASSWORD=mypassword
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    restart: always
